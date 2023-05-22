@@ -32,7 +32,7 @@ public class TaskController {
     }
 	@GetMapping(value="/test")
 	public String metodoPrueba() {
-		System.out.print("PRUEBA CONSOLA");
+		System.out.print("PRUEBasdasA CONSOLA");
 		return "Hola Desde metodo Prueba";
 	}
 	
@@ -58,6 +58,7 @@ public class TaskController {
 	
     @DeleteMapping("/task/delete/{id}")
     public void deleteTask(@PathVariable Long id) {
+    	System.out.print("Metodo Delete desde Spring");
         taskRepository.deleteById(id);
     }
 

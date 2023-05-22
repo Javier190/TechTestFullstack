@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import '../App.css';
 
 function TaskList() {
     const [tasks, setTasks] = useState([]);
@@ -64,38 +65,49 @@ function TaskList() {
 
     return (
         <div>
-            <h2>Task List</h2>
-            <ul>
-                {tasks.map(task => (
-                    <li key={task.id}>
-                        {task.title} - {task.description} - {task.completed ? "Completed" : "Not Completed"}
-                        <button onClick={() => handleDelete(task.id)}>Delete</button>
-                        <form onSubmit={(event) => {
-                            event.preventDefault();
-                            handleUpdate({ ...task, title: event.target.title.value, description: event.target.description.value });
-                        }}>
-                            <input type="text" name="title" defaultValue={task.title} />
-                            <input type="text" name="description" defaultValue={task.description} />
-                            <button>Update</button>
-                        </form>
-                    </li>
-                ))}
-            </ul>
-            <h2>Add Task</h2>
-            <form onSubmit={handleSubmit}>
-                <label>
-                    Title:
-                    <input type="text" name="title" />
-                </label>
-                <br />
-                <label>
-                    Description:
-                    <input type="text" name="description" />
-                </label>
-                <br />
-                <button>Add</button>
-            </form>
+  <h2 className="title-task-list" style={{ marginBottom: '1rem' }}>Task List</h2>
+  <ul style={{ listStyleType: 'none', padding: 0 }}>
+    {tasks.map(task => (
+      <li key={task.id} style={{ marginBottom: '0.5rem' }}>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          <span style={{ marginRight: '0.5rem' }}>{task.title} - {task.description} - {task.completed ? "Completed" : "Not Completed"}</span>
+          <button
+            onClick={() => handleDelete(task.id)}
+            style={{ marginLeft: '0.5rem' }}
+          >
+            Delete
+          </button>
         </div>
+        <form
+          onSubmit={(event) => {
+            event.preventDefault();
+            handleUpdate({ ...task, title: event.target.title.value, description: event.target.description.value });
+          }}
+          style={{ marginTop: '0.5rem' }}
+        >
+          <input type="text" name="title" defaultValue={task.title} style={{ marginRight: '0.5rem' }} />
+          <input type="text" name="description" defaultValue={task.description} style={{ marginRight: '0.5rem' }} />
+          <button type="submit">Update</button>
+        </form>
+      </li>
+    ))}
+  </ul>
+  <h2 className="space-between-list-input">Add Task</h2>
+  <form onSubmit={handleSubmit}>
+    <label style={{ marginRight: '0.5rem' }}>
+      Title:
+      <input type="text" name="title" style={{ marginLeft: '0.5rem' }} />
+    </label>
+    <br />
+    <label style={{ marginRight: '0.5rem' }}>
+      Description:
+      <input type="text" name="description" style={{ marginLeft: '0.5rem' }} />
+    </label>
+    <br />
+    <button type="submit">Add</button>
+  </form>
+</div>
+
     );
 }
 
