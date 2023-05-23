@@ -35,12 +35,20 @@
 }
 
 .title-task-list{
-  background-color: blue;
+  background-color: aliceblue;
+  margin-bottom: 5rem;
+  display: flex;
+  justify-content: center;
 }
 
 .space-between-list-input{
   margin-top: 9rem;
   margin-bottom: 0.5rem;
+}
+
+.list-style{
+  background-color: beige;
+  padding: 3rem;
 }
 
 @keyframes App-logo-spin {

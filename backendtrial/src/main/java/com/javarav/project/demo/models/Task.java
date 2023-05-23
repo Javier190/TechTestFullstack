@@ -23,16 +23,12 @@ public class Task {
     @Column(nullable = false)
     private boolean completed;
 
-    /*
     
-    public Task(Long id, String title, String description, boolean completed) {
-		super();
-		this.id = id;
-		this.title = title;
-		this.description = description;
-		this.completed = completed;
+    
+    public Task() {
+		
 	}
-*/
+
 	public Long getId() {
         return id;
     }

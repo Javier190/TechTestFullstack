@@ -65,8 +65,8 @@ function TaskList() {
 
     return (
         <div>
-  <h2 className="title-task-list" style={{ marginBottom: '1rem' }}>Task List</h2>
-  <ul style={{ listStyleType: 'none', padding: 0 }}>
+  <h2 className="title-task-list">Task List</h2>
+  <ul className="list-style" style={{ listStyleType: 'none'}}>
     {tasks.map(task => (
       <li key={task.id} style={{ marginBottom: '0.5rem' }}>
         <div style={{ display: 'flex', alignItems: 'center' }}>
