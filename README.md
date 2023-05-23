@@ -2,7 +2,7 @@
 
 This is a repository done as a Trial for the Fullstack Developer role. 
 
-The Mains task was basically create a To-Do App (Task Registers) with a CRUD. 
+The Mains task was basically create a To-Do App (Task Registers) with a CRUD. Add Unit Testing and stuff
 
 For the front i used ReactJS (axios and redux), for backend SpringBoot (JPA + crudRepository) + And H2 database only for development purposes.
 
