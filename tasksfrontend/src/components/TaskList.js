@@ -93,10 +93,10 @@ function TaskList() {
     ))}
   </ul>
   <h2 className="space-between-list-input">Add Task</h2>
-  <form onSubmit={handleSubmit}>
+  <form style={{ display:"flex", flexDirection: "column" }} onSubmit={handleSubmit}>
     <label style={{ marginRight: '0.5rem' }}>
       Title:
-      <input type="text" name="title" style={{ marginLeft: '0.5rem' }} />
+      <input type="text" name="title" style={{ marginLeft: '3.65rem' }} />
     </label>
     <br />
     <label style={{ marginRight: '0.5rem' }}>
@@ -104,7 +104,7 @@ function TaskList() {
       <input type="text" name="description" style={{ marginLeft: '0.5rem' }} />
     </label>
     <br />
-    <button type="submit">Add</button>
+    <button style={{ width: '100%', display: "flex", justifyContent: "center", marginTop: "2rem", padding: "1rem", fontSize: "1rem" }} type="submit">Add</button>
   </form>
 </div>
 

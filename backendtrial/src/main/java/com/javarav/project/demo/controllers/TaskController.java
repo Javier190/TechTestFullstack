@@ -38,7 +38,7 @@ public class TaskController {
 	
     @GetMapping("/tasks")
     public List<Task> getTasks() {
-    	System.out.print("HOLA GET TASKS");
+    	System.out.println("HOLA GET TASKS");
         return (List<Task>) taskRepository.findAll();
     }
 
