@@ -1,5 +1,6 @@
+Run: 
 Para correrlo abre el Spring Tools Suite y run as a Spring Boot App
-y uego en la carpeta de front solo un npm start
+y luego en la carpeta de front solo un npm start.
 
 Tambien tiene pruebas unitarias para ejecutar:
 Para esto vas a la clase Test -> Click derecho Run as Junit Tests
