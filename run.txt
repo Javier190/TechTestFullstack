@@ -4,3 +4,9 @@ y luego en la carpeta de front solo un npm start.
 
 Tambien tiene pruebas unitarias para ejecutar:
 Para esto vas a la clase Test -> Click derecho Run as Junit Tests
+
+Para que funcione Kafka tuve que bajar desde la pagina oficial el Zookeper y luego correr estos comandos en CMD desde la carpeta de lo que baje. Un comando para zookeper el otro para el server kafka.
+Busca en google por Apache Kafka quickstart y te va a aparecer estos comandos.
+
+ .\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
+.\bin\windows\kafka-server-start.bat .\config\server.properties 
